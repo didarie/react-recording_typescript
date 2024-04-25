@@ -18,11 +18,8 @@ const ua: Dictionary = {
 
 const dictionaries = { en, ua };
 
-export function translate(
-  code: string,
-  lang: Lang = Lang.EN,
-) {
+export function translate(key: string, lang = Lang.EN) {
   const dictionary = dictionaries[lang] || en;
 
-  return dictionary[code] || code;
+  return dictionary[key] || key;
 }

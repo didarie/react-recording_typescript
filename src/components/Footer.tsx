@@ -1,10 +1,11 @@
-import { useContext } from 'react';
 import { translate } from '../utils/translate';
-import { LangContext } from './LangContext';
+import { Lang } from '../types/Lang';
 
-export const Footer = () => {
-  const { lang } = useContext(LangContext);
+type Props = {
+  lang: Lang;
+};
 
+export const Footer = ({ lang }: Props) => {
   return (
     <footer>
       {translate('footer.greating', lang)}
