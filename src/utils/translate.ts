@@ -7,13 +7,13 @@ type Dictionary = {
 const en: Dictionary = {
   'homePage.title': 'Home Page',
   'homePage.content': 'Some page content',
-  'footer.greating': 'Welcome to Mate academy',
+  'footer.greeting': 'Welcome to Mate academy',
 };
 
 const ua: Dictionary = {
   'homePage.title': 'Домашня сторінка',
   'homePage.content': 'Тут буде якийсь вміст',
-  'footer.greating': 'Вітаємо в Mate academy',
+  'footer.greeting': 'Вітаємо в Mate academy',
 };
 
 const dictionaries = { en, ua };

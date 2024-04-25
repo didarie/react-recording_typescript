@@ -8,7 +8,7 @@ type Props = {
 export const Footer = ({ lang }: Props) => {
   return (
     <footer>
-      {translate('footer.greating', lang)}
+      {translate('footer.greeting', lang)}
     </footer>
   );
 }
