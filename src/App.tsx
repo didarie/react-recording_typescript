@@ -3,22 +3,24 @@ import { Footer } from "./components/Footer";
 import { Lang } from "./types/Lang";
 import { LangSelector } from "./components/LangSelector";
 import { HomePage } from "./components/HomePage";
+import { LangProvider } from "./components/LangContext";
 
 export const App = () => {
-  const [lang, setLang] = useState(Lang.EN);
 
   return (
     <div className="App">
+      <LangProvider>
       <header className="header">
         Mate academy
-        <LangSelector lang={lang} onChange={setLang} />
+        <LangSelector/>
       </header>
 
       <main>
-        <HomePage lang={lang} />
+        <HomePage/>
       </main>
 
-      <Footer lang={lang} />
+      <Footer  />
+      </LangProvider>
     </div>
   );
 };

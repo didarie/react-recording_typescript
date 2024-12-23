@@ -1,15 +1,14 @@
+import { useContext } from 'react';
 import { Lang } from '../types/Lang';
+import { LangContext } from './LangContext';
 
-type Props = {
-  lang: Lang;
-  onChange: (lang: Lang) => void;
-};
+export const LangSelector = () => {
+  const {lang,setLang} = useContext(LangContext);
 
-export const LangSelector = ({ lang, onChange }: Props) => {
   return (
     <select
       value={lang}
-      onChange={event => onChange(event.target.value as Lang)}
+      onChange={event => setLang(event.target.value as Lang)}
     >
       <option value={Lang.EN}>English</option>
       <option value={Lang.UA}>Українська</option>
